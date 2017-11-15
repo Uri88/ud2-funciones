@@ -7,7 +7,9 @@ import java.io.InputStreamReader;
 public class Main {
 
 
-    public static double calcularCambio(double a, double cambio, String opcion) {
+    public static double calcularCambio(double a, String opcion) {
+
+        double cambio=0;
 
         switch (opcion) {
 
@@ -40,21 +42,19 @@ public class Main {
         System.out.println("Moneda a la que convertir (USD, GBP, CNY, JPY): ");
         String convertir = br.readLine().toLowerCase();
 
-        double resultado = 0;
-
         switch (convertir) {
 
             case "usd":
-                System.out.println("--- " + cantidad + " euros son " + calcularCambio(cantidad, resultado, convertir) + " dolares ---");
+                System.out.println("--- " + cantidad + " euros son " + calcularCambio(cantidad, convertir) + " dolares ---");
                 break;
             case "gbp":
-                System.out.println("--- " + cantidad + " euros son " + calcularCambio(cantidad, resultado, convertir) + " libras ---");
+                System.out.println("--- " + cantidad + " euros son " + calcularCambio(cantidad, convertir) + " libras ---");
                 break;
             case "cny":
-                System.out.println("--- " + cantidad + " euros son " + calcularCambio(cantidad, resultado, convertir) + " yuanes ---");
+                System.out.println("--- " + cantidad + " euros son " + calcularCambio(cantidad, convertir) + " yuanes ---");
                 break;
             case "jpy":
-                System.out.println("--- " + cantidad + " euros son " + calcularCambio(cantidad, resultado, convertir) + " yenes ---");
+                System.out.println("--- " + cantidad + " euros son " + calcularCambio(cantidad, convertir) + " yenes ---");
                 break;
 
         }
