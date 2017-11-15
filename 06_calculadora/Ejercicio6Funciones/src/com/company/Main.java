@@ -10,11 +10,13 @@ public class Main {
 
         double resultado = 2 * π * r;
         return resultado;
+        //return = 2 * π * r; Puedes devolverlo en una misma linea
     }
 
     public static double area(double r, double π) {
 
         double resultado = π * (r * r);
+        //Math.pow(r,2) para elevar al cuadrado
         return resultado;
     }
 
@@ -28,6 +30,7 @@ public class Main {
         // write your code here
 
         double π = 3.14159265359;
+        //Math.PI para poner el numerp pi
         char opcion;
         double r=0;
 
@@ -35,7 +38,7 @@ public class Main {
 
 
         do {
-            System.out.print("=== Calculadora ===\n" +
+            System.out.print("\n=== Calculadora ===\n" +
                     "a) Longitud de la circunferencia\n" +
                     "b) Área del círculo\n" +
                     "c) Volumen de la esfera\n" +
@@ -45,7 +48,7 @@ public class Main {
             opcion = br.readLine().toLowerCase().charAt(0);
 
 
-            if (opcion!='d'){
+            if (opcion =='a' || opcion =='b' || opcion =='c'){
                 System.out.print("Introduce un radio: ");
                 r = Double.parseDouble(br.readLine());
             }
@@ -54,23 +57,23 @@ public class Main {
             switch (opcion) {
 
                 case 'a':
-                    System.out.println("El resultado de la Longitud es: " + (longitud(r, π)));
+                    System.out.println("\nEl resultado de la Longitud es: " + (longitud(r, π)));
                     break;
 
                 case 'b':
-                    System.out.println("El resultado del Area es: " + (area(r, π)));
+                    System.out.println("\nEl resultado del Area es: " + (area(r, π)));
                     break;
 
                 case 'c':
-                    System.out.println("El resultado del Volumen es: " + (volumen(r, π)));
+                    System.out.println("\nEl resultado del Volumen es: " + (volumen(r, π)));
                     break;
 
                 case 'd':
-                    System.out.println("Saliendo...");
+                    System.out.println("\nSaliendo...");
                     break;
 
                 default:
-                    System.out.println("ERROR. Parametro no valido.");
+                    System.out.println("\nERROR. Parametro no valido.");
                     break;
 
 
