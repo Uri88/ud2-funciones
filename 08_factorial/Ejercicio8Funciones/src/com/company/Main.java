@@ -6,11 +6,13 @@ import java.io.InputStreamReader;
 
 public class Main {
 
-    public static int factorepe(int a, int resultado) {
+    public static int factorepe(int a) {
+
+        int resultado = 1;
 
         for (int i = 1; i <= a; i++) {
 
-            resultado = resultado * i;
+            resultado *= i;
         }
         return resultado;
     }
@@ -26,14 +28,13 @@ public class Main {
         // write your code here
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int resultado = 1;
 
 
         System.out.print("Introduce un valor: ");
         int a = Integer.parseInt(br.readLine());
 
 
-        System.out.println("El factorial reiterativo de " + 'a' + " es: " + (factorepe(a, resultado)));
+        System.out.println("El factorial reiterativo de " + 'a' + " es: " + (factorepe(a)));
 
         System.out.println("El factorial recursivo de " + 'a' + " es: " + (factorecu(a)));
 
