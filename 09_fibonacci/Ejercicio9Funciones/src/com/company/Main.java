@@ -21,10 +21,21 @@ public class Main {
             return fiborepe(n - 1) + fiborepe(n - 2);
         }
     }
-    public static int fiboite() {
 
+    public static int fiboite(int n) {
 
-        return 0;
+        int a = 0;
+        int b = 1;
+        int c;
+
+        for (int i = 0; i < n; i++) {
+            c = b + a;
+            a = b;
+            b = c;
+
+        }
+
+        return a;
     }
 
 
@@ -38,6 +49,7 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
 
         System.out.println(fiborepe(n));
+        System.out.println(fiboite(n));
 
     }
 }
